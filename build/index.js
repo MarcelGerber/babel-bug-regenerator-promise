@@ -3888,63 +3888,41 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_2___default.a.resolve(value).then(_next, _throw); } }
+function delay(ms) {
+  return _babel_runtime_corejs3_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function delay$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          return _context.abrupt("return", new _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_2___default.a(function (resolve, reject) {
+            _babel_runtime_corejs3_core_js_stable_set_timeout__WEBPACK_IMPORTED_MODULE_1___default()(resolve, ms);
+          }));
 
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_2___default.a(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function delay(_x) {
-  return _delay.apply(this, arguments);
-}
-
-function _delay() {
-  _delay = _asyncToGenerator(
-  /*#__PURE__*/
-  _babel_runtime_corejs3_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(ms) {
-    return _babel_runtime_corejs3_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            return _context.abrupt("return", new _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_2___default.a(function (resolve, reject) {
-              _babel_runtime_corejs3_core_js_stable_set_timeout__WEBPACK_IMPORTED_MODULE_1___default()(resolve, ms);
-            }));
-
-          case 1:
-          case "end":
-            return _context.stop();
-        }
+        case 1:
+        case "end":
+          return _context.stop();
       }
-    }, _callee);
-  }));
-  return _delay.apply(this, arguments);
+    }
+  });
 }
 
 function main() {
-  return _main.apply(this, arguments);
-}
+  return _babel_runtime_corejs3_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function main$(_context2) {
+    while (1) {
+      switch (_context2.prev = _context2.next) {
+        case 0:
+          console.log('hello world!');
+          _context2.next = 3;
+          return _babel_runtime_corejs3_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(delay(2000));
 
-function _main() {
-  _main = _asyncToGenerator(
-  /*#__PURE__*/
-  _babel_runtime_corejs3_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-    return _babel_runtime_corejs3_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            console.log('hello world!');
-            _context2.next = 3;
-            return delay(2000);
+        case 3:
+          console.log('done!');
 
-          case 3:
-            console.log('done!');
-
-          case 4:
-          case "end":
-            return _context2.stop();
-        }
+        case 4:
+        case "end":
+          return _context2.stop();
       }
-    }, _callee2);
-  }));
-  return _main.apply(this, arguments);
+    }
+  });
 }
 
 main();
